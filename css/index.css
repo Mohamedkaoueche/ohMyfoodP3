@@ -48,7 +48,7 @@ body
   position: fixed;
   inset: 0;
   margin: auto;
-  z-index: 3;
+  z-index: 2;
   -webkit-animation: spin 1000ms  linear infinite;
   -o-animation: spin 1000ms linear infinite;
   animation: spin 1000ms linear infinite;
@@ -174,6 +174,7 @@ h1
     cursor: pointer;
     transition-duration: .25s;
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    z-index: 1;
 }
 .boutton:hover
 {
@@ -317,6 +318,7 @@ h1
 .far
 {
   position: absolute;
+  transform: translateX(-100%);
 
 }
 .plein
@@ -326,7 +328,7 @@ h1
   background: linear-gradient(0deg,rgba(127, 87, 175, 1),rgba(255,121,218,1));
   background-clip: border-box;
   -webkit-background-clip: text;
-  transform: translate(100%,100%);
+  transform: translate(-20px,100%);
   opacity:0;
   font-size: 10px;
   transition: 200ms ease;
@@ -336,14 +338,9 @@ h1
 .plein:hover
 {
   opacity: 1;
-  transform: translateX(100%)translateY(90.8%) scale(3.1);
+  transform: translateX(-20px)translateY(90%) scale(3.1);
 }
-/****Footer
-.plein:hover
-{   
-
-}
-****/
+/****Footer****/
 .footer {
   background-color: #353535;
 }
@@ -417,6 +414,7 @@ ul {
     grid-template-columns: 1fr;
     justify-content: center;
   }
+
 }
 @media screen and (max-width: 538px) {
 
@@ -426,14 +424,7 @@ ul {
     gap: 1rem;
   }
 }
-@media screen and (max-width: 422px) {
 
-  .far
-  {
-    position: absolute;
-    transform: translateX(0%);
-  }
-}
 @media screen and (max-width: 360px) {
   .blocList
 {   
@@ -446,16 +437,7 @@ ul {
     max-width: 250px;
     cursor: pointer;
 }
-.vide
-{
-  position: absolute;
-  transform: translateX(-50%);
-}
-.far
-{
-  position: absolute;
-  transform: translateX(0%);
-}
+
 .boutton
 {
     margin-top: 20px;
@@ -524,16 +506,6 @@ ul {
   {
     margin-left: 40%;
   }
-  .vide
-{
-  position: absolute;
-  transform: translateX(-50%);
-}
-.far
-{
-  position: absolute;
-  transform: translateX(0%);
-}
 }
 
 
