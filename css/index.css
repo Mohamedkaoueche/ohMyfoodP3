@@ -18,6 +18,7 @@ body
   margin: auto;
   z-index: 2;
   animation: disappear 2s forwards;
+  /* Forward évite les boucles d'animation*/
   animation-delay: 2s;
 
 }
@@ -408,8 +409,8 @@ ul {
 @media  screen and (max-width:780px) {
   .cards {
     display: grid;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
     grid-template-columns: 1fr;
     justify-content: center;
   }
